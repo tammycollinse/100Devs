@@ -113,3 +113,50 @@ function lastQuestion(num){
       console.log(result)
     }
 }
+//NB is the array iteration methods, such as MAP/FILTER/FIND ETC
+//other array methods such as pop/shift/unshift etc
+
+function sumSecongHighestAndSecondLowest(arr){
+    let sortedArray = arr.sort((a,b)=> a-b)
+    console.log(sortedArray[1] + sortedArray[sortedArray.length - 2])
+}
+
+//DELVING INTO OBJECTS
+//Objects are known to have properties (ATTRIBUTES), that might be variables to be assigned
+
+//Objects also have METHODS described as behaviors=> functions that manipulate the properties and those values etc, eg, start() stop()
+
+//example of an object
+
+let stopwatch = {} //this is an object literal
+
+stopwatch.currentTime = 12
+
+stopwatch.tellTime = function(time){
+    console.log(`the current time is ${time}`)
+} //this is a method because it is a function, method is a value that has a function
+
+stopwatch.tellTime(stopwatch.currentTime)
+
+//THIS IS CLASS 22, SOME REVIEW AND SOME PRACTICE AND EXPANSION ON OBJECTS
+
+function favDrink(){
+    let favOne = "My fav drink is Diet Coke and Water"
+    favOne = favOne.trim() // a method that removes the white spaces (did not know that,damn)
+    console.log(favOne)
+}
+
+let string = "This is a tester string that is supposed to check for the words for the word apple" // my solution to this was more complicated
+let check = string.includes("apple")
+//there is another way of solving this
+console.log(string.search("apple")) //this returns the index of where the search item was found
+
+if (check === true){
+    return "this sentence includes the word 'apple"
+} else {
+    return "this sentence does not include the word apple"
+}
+
+function rockPaperScissors(){
+    let result = "";
+}
