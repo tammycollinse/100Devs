@@ -158,5 +158,60 @@ if (check === true){
 }
 
 function rockPaperScissors(){
-    let result = "";
+    let result = Math.random();
+
+    if(result<.33){
+        return "rock"
+    } else if(result < .66){
+        return "paper"
+    } else {
+        return "scissors"
+    }
+}
+
+function ourChoice(choice){
+    let botChoice = rockPaperScissors() // this will assign the return value to this variable
+}
+
+//FINALLY WE ARE GETTING TO CONSTRUCTORS!
+//What if we wanted to make a lot of objects?
+//cars example, if we wanted to make a lot of cars? We would need a factory
+//Constructors => the car factory
+
+function MakeCar(carMake,carModel,carColor, numOfDoors){ // not sure why I have a flag under the constrcutor name
+    this.make = carMake //these are essentially properties and methods 
+    this.model = carModel
+    this.color = carColor
+    this.doors = numOfDoors
+    this.honk = function(){
+        console.log("BEEP BEEP MOTHER FUCKER")
+    }
+    this.lock = function(){
+        console.log(`Locked ${this.doors} doors!`)
+    }
+} 
+
+//all that a constuctor is, is a function that spits out objects! we use the upper case in the declaration name in order to differentiate between functions that are named with the function declaration syntax
+
+let hondaCivid = new MakeCar("Honda", "Civic", "Silver" , 4)
+
+let teslaRoadster = new MakeCar("Tesla", "Roadster" , "Red" , 2)
+
+//old school testing of objects
+
+let mouseObj = {} //if I wanted to make mutiple mouse objects, this code would be extremely redundant if we had to copy and paste every single time so therefore we have constructors
+
+mouseObj.color = "black"
+mouseObj.shape = "Oval"
+mouseObj.brand = "Apple"
+
+mouseObj.click = function(){
+    console.log("This is a click=")
+}
+mouseObj.hover = function(){
+    console.log('This is a hover')
+}
+
+mouseObj.drag = function(){
+    console.log('This is the drag of a mouse')
 }
