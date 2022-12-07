@@ -48,7 +48,7 @@ if (totalArr1>totalArr2){
     return false
 }
 }
-//there is a way more effective solution
+//there is a way more effective solution`   `````````````
 
 function otherSolution(a,b){
     return a.reduce((acc, current)=> acc + current**2, 0) > b.reduce((acc, current) => acc + current**3, 0)
@@ -70,3 +70,46 @@ const newFilteredArr = array.filter(arrElement =>
 }
 
  // this will use array methods to create a new array
+
+//SHARPENING AND PLAYING AROUND WITH SOME CSS
+//spelling and grammar rules, the css syntax
+
+//every block is known as a rule, and in every rule we have a selector
+//we have DECLARATIONS in the code blocks, the have properties and values
+
+//-------------------OBJECT ORIENTED PROGRAMMING-----------------------// CLASS 30
+
+//What are objects? A combination of methods and variables
+
+//what does OOP bring to the table and add value to my journey as a software engineer
+//some review
+//objects represent the attributes and behavior of something used in a program
+//object vairables are called properties and object functions are called methods
+//objects store ''keyed'' collections
+
+//feeling lost with constructors and classes so let's review with #100Devs
+//OBJECTSSSSS
+
+
+//some basic review
+function logHighAndLow(n1,n2,n3){
+    let min = Math.min(n1,n2,n3)
+    let max = Math.max(n1,n2,n3)
+    console.log(`The lowest number is ${min} and the highest value is ${max}`) //this is known as bling syntax 
+}
+
+function randomStuff(){
+    let result = Math.random() //returns a value between 0-1
+    if(result < 0.5){
+        return 'heads'
+    } else {
+        return "tails"
+    }
+}
+
+function lastQuestion(num){
+    for(let i = 0 ; i <= num ; i++){
+      let result = randomStuff()
+      console.log(result)
+    }
+}
